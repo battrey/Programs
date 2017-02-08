@@ -1,0 +1,31 @@
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.*;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class quiz1 {
+    public static void main (String [] args){
+        Scanner kbd = new Scanner(System.in);
+
+        try {
+            Socket sock = new Socket("10.10.22.199", 3601);
+            String input = "";
+            DataInputStream in = new DataInputStream(sock.getInputStream());
+            DataOutputStream out = new DataOutputStream(sock.getOutputStream());
+
+            in = new DataInputStream(sock.getInputStream());
+            out = new DataOutputStream(sock.getOutputStream());
+            System.out.println("S: " +in.readLine());
+            System.out.print("C: ");
+            input = kbd.nextLine();
+            out.writeBytes(input);
+            System.out.print(in.readLine());
+            System.out.println("S: " +in.readLine());
+        } catch (IOException ex) {
+            System.out.print("No Connection!");
+        }
+    }
+}

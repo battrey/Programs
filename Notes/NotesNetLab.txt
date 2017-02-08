@@ -1,0 +1,54 @@
+UTP
+STP
+Straight-through
+Cross-over
+
+In regular networking we have 3 basic devices by function:
+
+*Hub - no config, no wifi 
+
+*Switch - with config only to LAN(local area network)
+	
+	- intention is to connect to computer and internet and needs a modem or a router to connect to the internet.
+
+*Router - with config(more config than switch), for LAN, and majority has Wifi
+	- WAN
+	- MAN
+
+Home Network:
+	modem - modulator demodulator
+	      - analog to digital; digital to analog
+	      - ex.DSL
+	
+	router - allows computers to connect to the internet 
+
+	modem router - combination of modem and router
+		     - allows computers to connect to the internet
+
+	WIFI Hotspots/Tethering - it's not a router and it's a modem
+				- uses 3G/4G connection
+
+Assignments:
+	How to config DHCP(Dynamic Host Configuration Protocol) server?
+	How to config static IP addressing on a LAN?
+	Difference between IP and Mac Address.
+	Default gateway, username;password
+	
+Default Gateway is the router.
+FACTORY RESET
+WAN status if you're connected to a network.
+LAN is
+10-254 max
+Subnet leave as is.
+DHCP sets the name of the client connected.
+Under DHCP connection, sets or reserves to a device. (slots will always go down when you reserve)
+Can actually assign to clients IP address.
+You can revoke a client.
+You can allow to make changes in wireless setup.
+	-Wireless network name
+	-Visible or invisible
+	-Security mode(less secured WTSP??) personal
+	-MAC address filter
+	-MAC address are fixed but can be spoof
+	-
+	-error 404

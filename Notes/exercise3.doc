@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0033)http://10.10.22.199/exercise%203/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	
+	<title></title>
+	<meta name="GENERATOR" content="OpenOffice 4.1.1  (Win32)">
+	<meta name="AUTHOR" content="SLU SCIS">
+	<meta name="CREATED" content="20160212;9395270">
+	<meta name="CHANGEDBY" content="SLU SCIS">
+	<meta name="CHANGED" content="20160212;9452849">
+	<style type="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in }
+		H1 { margin-bottom: 0.08in }
+		H1.western { font-family: "Times New Roman", serif }
+		H1.cjk { font-family: "SimSun" }
+		H1.ctl { font-family: "Lucida Sans" }
+		TD P { margin-bottom: 0in }
+		A:link { so-language: zxx }
+	-->
+	</style>
+</head>
+<body lang="en-US" dir="LTR">
+<h1 class="western"><strong><font color="#000080"><font face="Arial"><font size="5"><span style="font-style: normal">The
+SMTP Protocol / The SMTP Server</span></font></font></font></strong></h1>
+<p><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal"><br>When
+you send an e-mail message from your computer to another computer it
+will go trough many different servers before it actually reaches your
+recipient's computer. The first stop for your e-mail message is an
+SMTP e-mail server. This server communicates directly with your
+computer using a protocol named&nbsp;</span></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><b>SMTP</b></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal">.
+SMTP is an abbreviation of </span></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><b>Simple
+Mail Transfer Protocol </b></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal">and
+it is the de facto standard for e-mail transmission from clients to
+mail servers via the Internet. SMTP is an old protocol and was used
+already in the 1980s to transfer messages between computers.<br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="1"><span style="font-style: normal"><span style="font-weight: normal"><br><br></span></span></font></font></font><font color="#000080"><font face="Arial"><font size="4"><span style="font-style: normal"><b>The
+SMTP Protocol</b></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal"><br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="1"><span style="font-style: normal"><span style="font-weight: normal"><br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal">Client
+computers communicate with e-mail servers (SMTP servers) using the
+SMTP protocol. SMTP is a relatively simple, text-based protocol, that
+use a limited set of commands and reply codes for its communication.
+The SMTP protocol is defined in </span></span></font></font></font>RFC
+2821 - Simple Mail Transfer Protocol<font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal">.
+The objective of Simple Mail Transfer Protocol is to transfer e-mail
+messages reliably, efficiently and easily. SMTP is independent of the
+particular transmission subsystem and requires only a reliable data
+connection.<br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="1"><span style="font-style: normal"><span style="font-weight: normal"><br><br></span></span></font></font></font><font color="#000080"><font face="Arial"><font size="4"><span style="font-style: normal"><b>SMTP
+uses Port 25</b></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal"><br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="1"><span style="font-style: normal"><span style="font-weight: normal"><br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal">SMTP
+servers normally communicate with the outside world trough the TCP
+port 25. It means that a client computer that wants to connect to an
+SMTP server must establish a connection to the server port number 25
+and use TCP (Transmission Control Protocol) to its low-level
+communication. However, nowadays some mail servers can also use
+another ports for SMTP communication, for example port 587 or
+2525.<br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="1"><span style="font-style: normal"><span style="font-weight: normal"><br><br></span></span></font></font></font><font color="#000080"><font face="Arial"><font size="4"><span style="font-style: normal"><b>The
+SMTP Commands</b></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal"><br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="1"><span style="font-style: normal"><span style="font-weight: normal"><br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal">The
+SMTP protocol consists, in its basic form, of about ten commands that
+is used for the communication between the client and the server.
+Below are some of the commands used in an SMTP communication
+described:<br></span></span></font></font></font><br><br>
+</p>
+<table width="99%" border="0" cellpadding="2" cellspacing="2">
+	<tbody><tr>
+		<td>
+			<p><font color="#007000"><font face="Arial"><font size="2">HELO /
+			EHLO</font></font></font></p>
+		</td>
+		<td>
+			<p><font face="Arial"><font size="2">This command is used to
+			identify the sender (client) to the SMTP server.</font></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p><font color="#007000"><font face="Arial"><font size="2">MAIL
+			FROM:</font></font></font></p>
+		</td>
+		<td>
+			<p><font face="Arial"><font size="2">Specifies the e-mail address of
+			the sender.</font></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p><font color="#007000"><font face="Arial"><font size="2">RCPT TO:</font></font></font></p>
+		</td>
+		<td>
+			<p><font face="Arial"><font size="2">Specifies the e-mail address of
+			the recipient.</font></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p><font color="#007000"><font face="Arial"><font size="2">DATA</font></font></font></p>
+		</td>
+		<td>
+			<p><font face="Arial"><font size="2">Starts the transfer of the
+			actual data (body text, attachments etc).</font></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p><font color="#007000"><font face="Arial"><font size="2">RSET
+			(RESET)</font></font></font></p>
+		</td>
+		<td>
+			<p><font face="Arial"><font size="2">Specifies that the current mail
+			transaction will be aborted.</font></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p><font color="#007000"><font face="Arial"><font size="2">VRFY
+			(VERIFY)</font></font></font></p>
+		</td>
+		<td>
+			<p><font face="Arial"><font size="2">Asks the receiver to confirm
+			that the argument identifies a user or mailbox.</font></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p><font color="#007000"><font face="Arial"><font size="2">HELP</font></font></font></p>
+		</td>
+		<td>
+			<p><font face="Arial"><font size="2">This command causes the server
+			to send helpful information to the client.</font></font></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p><font color="#007000"><font face="Arial"><font size="2">QUIT</font></font></font></p>
+		</td>
+		<td>
+			<p><font face="Arial"><font size="2">Quits the session.</font></font></p>
+		</td>
+	</tr>
+</tbody></table>
+<p style="orphans: 1"><font color="#000000"><font face="Arial"><font size="1"><span style="font-style: normal"><span style="font-weight: normal"><br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal">The
+client sends these commands to the mail server and the server replies
+with numerical codes and additional text messages after the numerical
+code. These reply codes tell the client if the previous sent command
+succeeded or failed.&nbsp;<br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="1"><span style="font-style: normal"><span style="font-weight: normal"><br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal">Commands
+and replies are composed of characters from the ASCII character set.
+Every command is normally 4 characters wide (sometimes with an
+additional sub command after) and the reply code always consists of 3
+digits. The length of the text after the reply code can vary
+depending of which mail server used, but the text length is normally
+less than 100 characters (but can be up to 508 characters according
+to the SMTP protocol definition). A space character is used to
+separate the numerical code from the text message.<br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="1"><span style="font-style: normal"><span style="font-weight: normal"><br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal">As
+you can see in the table above there are two commands used to
+identify the sender: HELO and EHLO. The HELO command is an older one
+and can be used if only basic functionality is required. If more
+advanced functionality is required the client should use the EHLO
+command instead. EHLO is a newer one and puts the server in an
+extended mode and more advanced commands can be used. Most SMTP
+servers today support the EHLO command.<br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="1"><span style="font-style: normal"><span style="font-weight: normal"><br></span></span></font></font></font><font color="#000080"><font face="Arial"><font size="4"><span style="font-style: normal"><b>Example
+of an SMTP Communication Session</b></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal"><br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="1"><span style="font-style: normal"><span style="font-weight: normal"><br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal">Below
+you find an example of a basic communication between a client and an
+SMTP server. An e-mail message is sent
+from&nbsp;</span></span></font></font></font><font color="#000080"><font face="Arial"><font size="2"><span style="font-style: normal"><b>mail@samlogic.com</b></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal">&nbsp;to&nbsp;</span></span></font></font></font><font color="#000080"><font face="Arial"><font size="2"><span style="font-style: normal"><b>john@mail.com</b></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal">&nbsp;in
+the following example:</span></span></font></font></font></p>
+<table width="99%" border="0" cellpadding="2" cellspacing="2" bgcolor="#f4f4f4">
+	<tbody><tr>
+		<td>
+			<p><font color="#007000"><font face="Arial"><font size="2">C: HELO
+			client.mydomain.com<br>S: 250 Hello client.mydomain.com<br>C: MAIL
+			FROM:&lt;mail@samlogic.com&gt;<br>S: 250 OK<br>C: RCPT
+			TO:&lt;john@mail.com&gt;<br>S: 250 OK<br>C: DATA<br>S: 354 End
+			data with &lt;CR&gt;&lt;LF&gt;.&lt;CR&gt;&lt;LF&gt;<br>C: &lt;The
+			message data (body text, subject, e-mail header, attachments etc)
+			is sent&gt;<br>C: .<br>S: 250 OK, message accepted for delivery:
+			queued as 12345<br>C: QUIT<br>S: 221 Bye</font></font></font></p>
+		</td>
+	</tr>
+</tbody></table>
+<p style="orphans: 1"><font color="#000000">&nbsp;</font><font color="#000000"><font face="Arial"><font size="1"><span style="font-style: normal"><span style="font-weight: normal"><br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><i><span style="font-weight: normal">(C=Client,
+S=Server)<br></span></i></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal"><br>The
+HELO command is used to identify you to the SMTP server. If
+everything is ok the SMTP server will respond with a 250 reply
+code.<br></span></span></font></font></font><font color="#000000">&nbsp;</font><font color="#000000"><font face="Arial"><font size="1"><span style="font-style: normal"><span style="font-weight: normal"><br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal">The
+MAIL FROM: command tells the SMTP server that an e-mail message will
+be sent. It also informs the server the e-mail address of the sender.
+If the mail server approves the sender's e-mail address the next
+command to send is the RCPT TO: command. This command tells the mail
+server the e-mail address of the recipient.<br></span></span></font></font></font><font color="#000000">&nbsp;</font><font color="#000000"><font face="Arial"><font size="1"><span style="font-style: normal"><span style="font-weight: normal"><br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal">If
+we have succeeded this far, it is time to send the actual data. This
+is done by first sending the DATA command and then the actual data
+after we have received a 354 reply code from the server. To tell the
+server when there is no more data left we must send a line containing
+a single dot ("&lt;CR&gt;&lt;LF&gt;.&lt;CR&gt;&lt;LF&gt;").<br></span></span></font></font></font><font color="#000000">&nbsp;</font><font color="#000000"><font face="Arial"><font size="1"><span style="font-style: normal"><span style="font-weight: normal"><br></span></span></font></font></font><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal">If
+the mail server have accepted the e-mail message for delivery it will
+respond with a 250 reply code. Then you can quit the session by
+sending the QUIT command. The server will then respond with a 221
+reply code and your e-mail message is on its way!</span></span></font></font></font></p>
+<p style="orphans: 1"><br><br>
+</p>
+<p style="orphans: 1"><font color="#000080"><font face="Arial"><font size="4"><span style="font-style: normal"><b>ACTIVITY
+3 </b></span></font></font></font>
+</p>
+<p style="orphans: 1"><font color="#000000"><font face="Arial"><font size="2"><span style="font-style: normal"><span style="font-weight: normal">Create
+a simple GUI-based program that will allow sending of mail using the
+pldt smtp server (no auth).</span></span></font></font></font></p>
+<p style="font-style: normal; font-weight: normal; orphans: 1"><font color="#555555"><font face="Verdana, BitStream vera Sans, Helvetica, sans-serif"><font size="2" style="font-size: 9pt"><font color="#000000"><font face="Arial"><font size="2">SMTP
+server: smtpdsl4.pldtdsl.net</font></font></font></font></font></font></p>
+<p style="font-style: normal; font-weight: normal; orphans: 1"><font color="#555555"><font face="Verdana, BitStream vera Sans, Helvetica, sans-serif"><font size="2" style="font-size: 9pt"><font color="#000000"><font face="Arial"><font size="2">Port:
+587</font></font></font></font></font></font></p>
+<p style="orphans: 1"><br><br>
+</p>
+<p style="orphans: 1"><br><br>
+</p>
+<p style="orphans: 1"><br><br>
+</p>
+
+</body></html>
