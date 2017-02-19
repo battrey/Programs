@@ -1,4 +1,8 @@
-UTP
+UTP Short for unshielded twisted pair, a popular type of cable that consists of two unshielded wires twisted around each other. 
+Due to its low cost, UTP cabling is used extensively for local-area networks (LANs) and telephone connections. 
+UTP cabling does not offer as high bandwidth or as good protection from interference as coaxial or fiber optic cables, 
+but it is less expensive and easier to work with.
+
 STP
 Straight-through
 Cross-over
