@@ -27,6 +27,10 @@ public class quiz2 {
                         N = Integer.parseInt(dis.readLine().trim());
                        	System.out.print(S.length());
 
+                        if(S.length() <= N){
+                            dos.writeBytes("invalid N");
+                        }
+
                         if (S.equalsIgnoreCase("exit")) {
                             s.close();
                             break;
@@ -41,11 +45,6 @@ public class quiz2 {
                             dos.writeBytes("not vowel\r\n");
                         }
 
-try{
-	if(S.length() <= N){
-    }
-
-}catch(Exception e){
 	dos.writeBytes("invalid N \r\n");
 }
 
