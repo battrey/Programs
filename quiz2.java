@@ -39,15 +39,11 @@ public class quiz2 {
                         char letter = S.charAt(N);
                         S = String.valueOf(letter);
 
-                        if(S.equalsIgnoreCase("a") || S.equalsIgnoreCase("e") || S.equalsIgnoreCase("i")|| S.equalsIgnoreCase("o") || S.equalsIgnoreCase("u")){
+                        if(S.equalsIgnoreCase("a") || S.equalsIgnoreCase("e") || S.equalsIgnoreCase("i")|| S.equalsIgnoreCase("o") || S.equalsIgnoreCase("u")) {
                            dos.writeBytes("vowel\r\n");
                         }else{
                             dos.writeBytes("not vowel\r\n");
                         }
-
-	dos.writeBytes("invalid N \r\n");
-}
-
 
                     } catch (Exception e) {
                         dos.writeBytes("not vowel \r\n");

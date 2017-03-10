@@ -13,6 +13,7 @@ public class Exercise2{
             try {
                 Socket sock = new Socket(input, x);
                 System.out.println("Port: " + x +" ---Connection open!");
+                sock.close();
             } catch (IOException ex) {
             }
         }

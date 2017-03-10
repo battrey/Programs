@@ -29,7 +29,7 @@ public class Quiz2Server {
                         System.out.println(N);
 
                         if(N.equalsIgnoreCase("a") || N.equalsIgnoreCase("e") || N.equalsIgnoreCase("i")|| N.equalsIgnoreCase("e") || N.equalsIgnoreCase("u")){
-                            dos.writeBytes("vowel\r\n");
+                            dos.writeBytes("vowel \r\n");
                         }else{
                             dos.writeBytes("not vowel\r\n");
                         }
